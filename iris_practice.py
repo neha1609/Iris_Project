@@ -20,13 +20,13 @@ from sklearn.svm import SVC
 # Load dataset
 #url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 #names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = read_csv("Iris.csv")
+dataset = read_csv("IRIS_.csv")
 print(dataset)
 # Split-out validation dataset
 array = dataset.values
 X = array[:,0:4]
 y = array[:,4]
-y=y.astype('int')
+#y=y.astype('int')
 X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=0, shuffle=False)
 # Spot Check Algorithms
 models = []
